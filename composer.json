@@ -1,0 +1,28 @@
+{
+    "name": "mice-tm/yii2-aws-file-input-widget",
+    "description": "Allows developers to integrate AWS S3 file upload",
+    "type": "yii2-helper",
+    "keywords": ["yii2", "aws", "widget", "file", "input", "upload"],
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Andrey Vanda",
+          "email": "skifbrt@gmail.com"
+        },
+        {
+          "name": "Iryna Mychkova",
+          "email": "imychkova@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "yiisoft/yii2": "^2.0.13",
+        "kartik-v/yii2-widget-fileinput": "~1.0.6",
+        "aws/aws-sdk-php": "~3.64.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "micetm\\aws\\fileinput\\": ""
+        }
+    }
+}
