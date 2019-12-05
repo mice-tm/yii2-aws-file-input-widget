@@ -104,6 +104,12 @@ class AwsFileInput extends \kartik\file\FileInput
                         filePath = '" . $awsPostObject->getFormAttributes()['action'] . "/' + data.extra.key + extension;
                     form.find('input[type=hidden][name=\"' + this.name + '\"]').val(filePath);
                     form.find('.file-caption-name').attr('title', '').val(filePath);
+                    
+                    data.filePath = filePath;
+                    $(document).trigger({
+                        type: 'awsFileInput.afterFileUpload',
+                        widgetData: data
+                    });
                 }",
                 'filecleared' => "function (event, id, index) {
                     $('form#" . $this->field->form->id . "').find('input[type=hidden][name=\"' + this.name + '\"]').val('');
