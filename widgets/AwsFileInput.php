@@ -11,7 +11,7 @@ class AwsFileInput extends \kartik\file\FileInput
     /** @var string AWS component name */
     public $awsComponent = 'aws';
 
-    /** @var string part of unique file name */
+    /** @var string model unique key */
     public $uniqueKey = 'id';
 
     /** @var array Custom filename parts */
